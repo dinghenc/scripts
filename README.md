@@ -7,18 +7,20 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/zs
 
 ## Add a user
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/adduser/install.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/adduser/install.sh)"
 ```
 
 ## Install golang
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/golang/install.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/golang/install.sh)"
 ```
 
 ## Install shadowsocks
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/shadowsocks/install.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/shadowsocks/install.sh)"
 
 # run
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/shadowsocks/run.sh)"
+mkdir -p ~/documents/shadowsocks && cd ~/documents/shadowsocks
+nohup go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:${PASSWD}@:8488' -verbose >> go-shadowsocks2.log 2>&1 &!
+lsof -i:8488
 ```

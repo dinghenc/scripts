@@ -1,4 +1,4 @@
 go install github.com/shadowsocks/go-shadowsocks2@latest
 
-echo "export PATH=\$PATH:/home/ubuntu/go/bin" >> ~/.zshrc
+echo "export PATH=\$PATH:/home/heding/go/bin" >> ~/.zshrc
 source ~/.zshrc
