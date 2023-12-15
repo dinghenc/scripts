@@ -5,7 +5,9 @@ if [[ $(echo $SHELL | grep -w zsh) == "" ]]; then
   exit 1
 fi
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mkdir -p ~/.zsh
+wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ~/.zsh/install.sh
+RUNZSH=no sh ~/.zsh/install.sh
 
 CUSTOM=~/.oh-my-zsh/custom
 
