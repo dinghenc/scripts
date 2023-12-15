@@ -11,7 +11,7 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.ta
 
 echo "install done"
 
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
+echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.zshrc
 source ~/.zshrc
 
 go version
