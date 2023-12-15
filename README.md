@@ -4,3 +4,8 @@
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/zsh/install.sh)"
 ```
+
+## Add a user
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/dinghenc/scripts/main/adduser/install.sh)"
+```
